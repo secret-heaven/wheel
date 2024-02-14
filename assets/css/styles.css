@@ -1,0 +1,224 @@
+html,
+body {
+    /* Set margin and padding to 0 to remove default spacing */
+    margin: 0;
+    padding: 0;
+    /* Set the height to 100% to cover the entire viewport */
+    height: 100%;
+    /* Apply the gradient background 
+    background: linear-gradient(45deg, #e74c3c, #9b59b6, #3498db, #fd79a8);*/
+    background: linear-gradient(45deg, #e74c3c, #9b59b6, #3498db, #fd79a8);
+        background-size: 400% 400%;
+    
+        -webkit-animation: AnimationName 30s ease infinite;
+        -moz-animation: AnimationName 30s ease infinite;
+        animation: AnimationName 30s ease infinite;
+}
+
+@-webkit-keyframes AnimationName {
+    0% {
+        background-position: 86% 0%
+    }
+
+    50% {
+        background-position: 15% 100%
+    }
+
+    100% {
+        background-position: 86% 0%
+    }
+}
+
+@-moz-keyframes AnimationName {
+    0% {
+        background-position: 86% 0%
+    }
+
+    50% {
+        background-position: 15% 100%
+    }
+
+    100% {
+        background-position: 86% 0%
+    }
+}
+
+@keyframes AnimationName {
+    0% {
+        background-position: 86% 0%
+    }
+
+    50% {
+        background-position: 15% 100%
+    }
+
+    100% {
+        background-position: 86% 0%
+    }
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.custom-header {
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Adjust the alpha value (fourth parameter) to change transparency */
+    color: white;
+    /* Text color */
+    padding: 15px;
+    /* Adjust padding as needed */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#app-icon {
+    width: 30px;
+    /* Adjust icon size as needed */
+    height: auto;
+    margin-right: 10px;
+}
+
+#app-name {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.menu {
+    margin-left: auto;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+#spinner-container {
+
+    position: relative;
+    /* Ensure the position is set to relative */
+    z-index: 9998;
+    /* Set a high z-index value */
+    width: 300px;
+    /* Adjust the width as per your wheel image size */
+    height: 300px;
+    /* Adjust the height as per your wheel image size */
+    margin: 50px auto;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #333;
+    /* Adjust the border color and size as needed */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    /* Adjust the box shadow as needed */
+}
+
+#spinner {
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transition: transform 4s ease-in-out;
+}
+
+#arrow {
+    position: absolute;
+    top: 10px;
+    /* Adjust the position of the arrow as per your design */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    /* Adjust arrow size as per your design */
+    height: 30px;
+    /* Adjust arrow size as per your design */
+}
+
+#spin-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #4CAF50;
+    /* Adjust button color as needed */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#spin-btn:hover {
+    background-color: #45a049;
+    /* Adjust button color on hover as needed */
+}
+
+.card-center {
+    display: flex;
+    justify-content: center;
+    /* Center horizontally */
+    align-items: center;
+    /* Center vertically */
+}
+
+.card {
+    position: relative;
+    /* Ensure the position is set to relative */
+    z-index: 9999;
+    /* Set a high z-index value */
+    width: 50%;
+    min-height: 70%;
+    /* Adjust as needed */
+    background-color: white;
+    /* Or any color you prefer */
+    border: 2px solid black;
+    /* Border style */
+    border-radius: 10px;
+    /* Rounded corners */
+    padding: 10px;
+    /* Padding inside the card */
+    box-shadow: 0px 4px 6px rgba(0, 1, 1, 0.1);
+    /* Shadow effect */
+    margin: 10px;
+    opacity: 0.9;
+    /* Adjust margin as needed */
+}
+
+.card-header {
+    font-size: 1.5rem;
+    /* Adjust header font size */
+    font-weight: bolder;
+    text-align: center;
+    /* Bold font for header */
+}
+
+.card-body {
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+    /* Adjust body font size */
+}
+
+.bottom-right-image {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 500px;
+    /* Adjust the width as needed */
+    height: 500px;
+    /* Adjust the height as needed */
+    background-image: url('../images/background2.png');
+    /* Specify the path to your image */
+    background-size: contain;
+    /* Ensure the image fits within the container */
+    opacity: 0.8;
+    /* Adjust the opacity level as needed */
+    pointer-events: none;
+    /* Ensure the image doesn't interfere with clicks */
+    background-repeat: no-repeat;
+    z-index: 0;
+}
